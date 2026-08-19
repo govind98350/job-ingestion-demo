@@ -56,7 +56,7 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(mess
 log = logging.getLogger("scraper")
 
 # ---- hard line: technical enforcement of "where we'd stop" ----
-ALLOWED_HOSTS = {"localhost", "127.0.0.1"}  # add sandbox/API hosts only, never real platforms
+ALLOWED_HOSTS = {"localhost", "127.0.0.1","job-ingestion-demo-f5qj.onrender.com"}  # add sandbox/API hosts only, never real platforms
 
 USER_AGENT_POOL = [
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36",
