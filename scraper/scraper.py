@@ -168,7 +168,7 @@ class Scraper:
         exhausted retries, so the caller can decide to skip and continue."""
         identity = self.identities.current()
         try:
-            resp = await client.get(url, headers=identity.headers(), timeout=10)
+            resp = await client.get(url, headers=identity.headers(), timeout=30)
         except httpx.RequestError as e:
             log.warning("network error on %s: %s (attempt %d)", url, e, attempt)
             return await self._retry_or_give_up(client, url, attempt)
